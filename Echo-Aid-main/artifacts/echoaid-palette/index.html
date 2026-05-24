@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EchoAid — Suarakan Isi Hati, Mulai Dari Sini</title>
+  <meta name="description" content="Platform kesehatan mental yang hangat dan tanpa penghakiman. Dirancang untuk mahasiswa dan pekerja muda Indonesia." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Lewati ke konten utama</a>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Navigasi utama">
+    <div class="container navbar-inner">
+      <a href="/" class="brand" aria-label="EchoAid beranda">
+        <span class="brand-logo" aria-hidden="true">E</span>
+        <span class="brand-name">EchoAid</span>
+      </a>
+      <div class="nav-menu" id="navMenu" role="menubar">
+        <a href="/" class="nav-link" role="menuitem">Beranda</a>
+        <a href="/mood/" class="nav-link" role="menuitem">Mood Check</a>
+        <a href="/learn/" class="nav-link" role="menuitem">Edukasi</a>
+        <a href="/sos/" class="nav-link danger" role="menuitem">Darurat</a>
+      </div>
+      <div class="nav-actions">
+        <button class="btn-icon" id="themeToggle" aria-label="Toggle mode gelap">
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" /></svg>
+          <svg class="icon-sun" style="display:none" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" /></svg>
+        </button>
+        <button class="btn-icon" id="menuBtn" aria-label="Buka menu" aria-expanded="false" aria-controls="mobileDrawer">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE DRAWER -->
+  <div class="mobile-overlay" id="mobileOverlay" aria-hidden="true"></div>
+  <div class="mobile-drawer" id="mobileDrawer" role="dialog" aria-label="Menu navigasi" aria-modal="true">
+    <div class="drawer-header">
+      <span>Menu</span>
+      <button class="btn-icon" id="closeMenu" aria-label="Tutup menu">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg>
+      </button>
+    </div>
+    <nav class="drawer-nav">
+      <a href="/" class="drawer-link">Beranda</a>
+      <a href="/mood/" class="drawer-link">Mood Check</a>
+      <a href="/learn/" class="drawer-link">Edukasi</a>
+      <a href="/sos/" class="drawer-link danger">🆘 Darurat</a>
+    </nav>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container hero-content">
+        <div class="hero-badge">
+          <span class="badge badge-primary">
+            <span class="badge-dot badge-dot-animate" aria-hidden="true"></span>
+            Ruang Aman Untukmu
+          </span>
+        </div>
+        <h1 class="hero-title" id="hero-heading">
+          Suarakan Isi Hati,<br />
+          <span class="hero-title-accent">Mulai Dari Sini.</span>
+        </h1>
+        <p class="hero-desc">
+          Platform kesehatan mental yang hangat dan tanpa penghakiman. Dirancang khusus untuk mahasiswa dan pekerja muda Indonesia yang merasa lelah, stres, atau sekadar butuh teman untuk mencatat perasaan.
+        </p>
+        <div class="hero-actions">
+          <a href="/mood/" class="btn btn-primary btn-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" /></svg>
+            Catat Mood Hari Ini
+          </a>
+          <a href="/learn/" class="btn btn-ghost-secondary btn-lg">
+            Pelajari Lebih Lanjut
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats" aria-labelledby="stats-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" id="stats-heading">Mengapa Kami Hadir?</h2>
+          <p class="section-desc">Kesehatan mental bukanlah tanda kelemahan, melainkan bagian penting dari kesejahteraan kita.</p>
+        </div>
+        <div class="stats-grid">
+          <article class="card stat-card card-hover">
+            <div class="stat-icon stat-icon-primary" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" /></svg>
+            </div>
+            <p class="stat-number">62%</p>
+            <p class="stat-label">Mahasiswa & Pekerja Muda</p>
+            <p class="stat-desc">Responden survei kami mengaku sering merasa stres atau cemas dalam keseharian, namun bingung harus mulai dari mana.</p>
+          </article>
+          <article class="card stat-card card-hover">
+            <div class="stat-icon stat-icon-secondary" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" /></svg>
+            </div>
+            <p class="stat-number">58.6%</p>
+            <p class="stat-label">Kurang Teredukasi</p>
+            <p class="stat-desc">Responden menyatakan tidak memahami fakta-fakta dasar seputar kesehatan mental, menjadikan edukasi langkah yang sangat kritis.</p>
+          </article>
+          <article class="card stat-card card-hover">
+            <div class="stat-icon stat-icon-danger" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" /></svg>
+            </div>
+            <p class="stat-number">10%</p>
+            <p class="stat-label">Peningkatan Kasus</p>
+            <p class="stat-desc">Masalah kesehatan mental terus meningkat di Asia Tenggara, bahkan terdapat 727.000 angka kematian akibat krisis mental secara global (2021).</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features section" aria-labelledby="features-heading">
+      <div class="container">
+        <div class="features-inner">
+          <div>
+            <h2 class="section-title" id="features-heading">Fitur yang Dirancang Untukmu</h2>
+            <p class="section-desc" style="text-align:left;">Kami mengatasi tiga hambatan utama: melacak mood, mendapat informasi tepercaya, dan menghapus stigma.</p>
+            <div class="features-list">
+              <div class="feature-item">
+                <div class="feature-icon feature-icon-primary" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75Z" /></svg>
+                </div>
+                <div>
+                  <h3 class="feature-title">Daily Mood Tracker</h3>
+                  <p class="feature-desc">Kenali polamu. Cukup satu klik untuk mencatat perasaanmu setiap hari, dilengkapi grafik mingguan untuk melihat perkembanganmu.</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon feature-icon-secondary" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" /></svg>
+                </div>
+                <div>
+                  <h3 class="feature-title">Edukasi Terpercaya</h3>
+                  <p class="feature-desc">Artikel singkat yang mudah dipahami tentang mengelola stres, teknik pernapasan, dan kapan harus mencari bantuan profesional.</p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon feature-icon-danger" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" /></svg>
+                </div>
+                <div>
+                  <h3 class="feature-title">Akses Cepat SOS</h3>
+                  <p class="feature-desc">Tombol darurat yang selalu siaga di pojok layar, menyambungkanmu langsung ke hotline krisis kesehatan mental di Indonesia.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="mockup-card">
+              <div class="mockup-row">
+                <span class="mockup-emoji" aria-hidden="true">😊</span>
+                <div>
+                  <p class="mockup-text-title">Mood Hari Ini</p>
+                  <p class="mockup-text-sub">Tercatat: Lumayan Baik</p>
+                </div>
+              </div>
+              <div class="mockup-skeleton">
+                <div class="skeleton-line" style="width:75%"></div>
+                <div class="skeleton-line" style="width:50%"></div>
+              </div>
+              <div class="mockup-tip">
+                <p class="mockup-tip-title">💡 Tips Hari Ini</p>
+                <p class="mockup-tip-text">Ambil napas perlahan selama 4 detik, tahan 7 detik, dan hembuskan 8 detik. Teknik 4-7-8 membantu menenangkan sistem saraf.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" aria-labelledby="cta-heading">
+      <div class="cta-pattern" aria-hidden="true"></div>
+      <div class="container cta-inner">
+        <div class="cta-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.625 9.75a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375m-13.5 3.01c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.184-4.183a1.14 1.14 0 0 1 .778-.332 48.294 48.294 0 0 0 5.83-.498c1.585-.233 2.708-1.626 2.708-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" /></svg>
+        </div>
+        <h2 class="cta-title" id="cta-heading">Kamu Tidak Pernah Sendirian.</h2>
+        <p class="cta-quote">"Merasa tidak baik-baik saja adalah hal yang normal. Mengambil langkah pertama untuk peduli pada diri sendiri adalah hal yang luar biasa."</p>
+        <a href="/mood/" class="btn-cta">
+          Mulai Perjalananmu
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" /></svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="/" class="brand" style="margin-bottom:1rem;display:inline-flex;" aria-label="EchoAid beranda">
+            <span class="brand-logo" aria-hidden="true">E</span>
+            <span class="brand-name">EchoAid</span>
+          </a>
+          <p class="footer-desc">Platform kesehatan mental yang aman dan ramah untuk mahasiswa dan dewasa muda Indonesia. Suarakan isi hatimu, mulai dari sini.</p>
+        </div>
+        <div>
+          <p class="footer-col-title">Tautan Cepat</p>
+          <nav class="footer-links" aria-label="Tautan footer">
+            <a href="/" class="footer-link">Beranda</a>
+            <a href="/mood/" class="footer-link">Mood Tracker</a>
+            <a href="/learn/" class="footer-link">Edukasi</a>
+            <a href="/sos/" class="footer-link">Darurat</a>
+          </nav>
+        </div>
+        <div>
+          <p class="footer-col-title">Bantuan Darurat</p>
+          <p class="footer-desc">Jika Anda atau seseorang yang Anda kenal sedang dalam krisis, segera hubungi profesional.</p>
+          <a href="/sos/" class="footer-link danger" style="display:inline-block;margin-top:0.75rem;font-weight:700;">Lihat Kontak Darurat →</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Tim HCI LB83 Binus University &mdash; Dibuat untuk tujuan edukasi SDG 3.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SOS FLOATING BUTTON -->
+  <div class="sos-fab-ring" aria-hidden="true"></div>
+  <a href="/sos/" class="sos-fab" aria-label="Bantuan Darurat SOS — klik untuk melihat hotline">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" /></svg>
+    <span class="sos-fab-label">SOS</span>
+  </a>
+
+  <script type="module" src="/src/app.js"></script>
+</body>
+</html>
